@@ -8,6 +8,7 @@
 /Extension.cs -text
 /PreBuild.bat -text
 Properties/AssemblyInfo.cs -text
+/Radar.cs -text
 /Util.cs -text
 bin/Debug/PostBuild.bat -text
 bin/Release/PostBuild.bat -text
