@@ -36,13 +36,6 @@ namespace Aion.isxAion
         #endregion
 
 		#region Methods   
-        /// <summary>
-        /// Get a list of Entities matching search parameters. If no parameters are specified, no filtering is done.
-        /// </summary>
-        public List<Entity> GetEntities(string[] searchParams)
-        {
-            return Util.GetListFromMember<Entity>(this, "GetEntities", "entity", searchParams);
-        }
         #endregion
     }
 }
