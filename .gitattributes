@@ -2,14 +2,10 @@
 /Aion.cs -text
 /Aion.isxAion.csproj -text
 /Aion.isxAion.sln -text
-/Aion.isxAion.suo -text
 /Character.cs -text
 /Entity.cs -text
 /Event.cs -text
 /Extension.cs -text
-/Lavish.InnerSpace.dll -text
-/Lavish.LavishNav.dll -text
-/Lavish.LavishVMRuntime.dll -text
 /PreBuild.bat -text
 Properties/AssemblyInfo.cs -text
 /Util.cs -text
