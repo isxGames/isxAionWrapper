@@ -35,11 +35,11 @@ namespace Aion.isxAion
 
 
 		#region Members
-        public int ID
+        public uint ID
         {
             get
             {
-                return GetMember<int>("ID");
+                return GetMember<uint>("ID");
             }
         }
         public string Name
@@ -173,6 +173,13 @@ namespace Aion.isxAion
             get
             {
                 return GetMember<string>("Legion");
+            }
+        }
+        public Entity Target
+        {
+            get
+            {
+                return new Entity(GetMember("Target"));
             }
         }
 		#endregion

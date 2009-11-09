@@ -29,6 +29,13 @@ namespace Aion.isxAion
 				return new Entity(GetMember("ToEntity"));
 			}
 		}
+        public Entity Target
+        {
+            get
+            {
+                return new Entity(GetMember("Target"));
+            }
+        }
         #endregion
 
 		#region Methods
