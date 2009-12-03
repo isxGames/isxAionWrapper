@@ -33,6 +33,15 @@ namespace Aion.isxAion
 
 
         #region Members
+        #region isxAion-1.5.1.4.0194
+        public AbyssRank AbyssRank
+        {
+            get
+            {
+                return new AbyssRank(GetMember("AbyssRank"));
+            }
+        }
+        #endregion
         #region isxAion-1.5.1.4.0137
         /// <summary>
         /// Used primarily to indicate PCs on your faction 
@@ -374,6 +383,8 @@ namespace Aion.isxAion
         #endregion
 
         #region Methods
+
+
         #region isxAion-1.5.1.4.0116
         public bool DoTarget()
         {
