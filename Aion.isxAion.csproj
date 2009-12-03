@@ -2,7 +2,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{A9583204-C40D-4496-BB62-0F9546E5D613}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -62,7 +62,8 @@
     <Compile Include="Character.cs" />
     <Compile Include="Entity.cs" />
     <Compile Include="Aion.cs" />
-    <Compile Include="Event.cs" />
+    <Compile Include="Events\Event.cs" />
+    <Compile Include="Events\EventArgs.cs" />
     <Compile Include="Extension.cs" />
     <Compile Include="isxAion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

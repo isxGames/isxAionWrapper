@@ -4,7 +4,8 @@
 /Aion.isxAion.sln -text
 /Character.cs -text
 /Entity.cs -text
-/Event.cs -text
+Events/Event.cs -text
+Events/EventArgs.cs -text
 /Extension.cs -text
 /PreBuild.bat -text
 Properties/AssemblyInfo.cs -text
