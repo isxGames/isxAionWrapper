@@ -34,6 +34,18 @@ namespace Aion.isxAion
         #endregion
 
         #region Members
+        #region isxAion-1.5.1.4.0074
+        /// <summary>
+        /// Red dots show AgroNPCs on the radar
+        /// </summary>
+        public bool ShowingAggroNPCs
+        {
+            get
+            {
+                return GetMember<bool>("ShowingAggroNPCs");
+            }
+        }
+        #endregion
         public bool ShowingMe
         {
             get
@@ -230,6 +242,13 @@ namespace Aion.isxAion
         #endregion
 
         #region Methods
+        #region isxAion-1.5.1.4.0074
+        public bool FilterAggroNPCs()
+        {
+            return ExecuteMethod("FilterAggroNPCs");
+        }
+        #endregion
+
         public bool FilterMe()
         {
             return ExecuteMethod("FilterMe");

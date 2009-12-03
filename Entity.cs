@@ -32,9 +32,198 @@ namespace Aion.isxAion
 		#endregion
 
 
-
-
 		#region Members
+        #region isxAion-1.5.1.4.0137
+        /// <summary>
+        /// Used primarily to indicate PCs on your faction 
+        /// </summary>
+        public bool IsFriendly
+        {
+            get
+            {
+                return GetMember<bool>("IsFriendly");
+            }
+        }
+
+        public bool InCombat
+        {
+            get
+            {
+                return GetMember<bool>("InCombat");
+            }
+        }
+
+        public bool IsResting
+        {
+            get
+            {
+                return GetMember<bool>("IsResting");
+            }
+        }
+
+        /// <summary>
+        /// This primarily refers to PC flying
+        /// </summary>
+        public bool IsFlying
+        {
+            get
+            {
+                return GetMember<bool>("IsFlying");
+            }
+        }
+
+        /// <summary>
+        /// The single blue/yellow arrow indicating new quest available
+        /// </summary>
+        public bool OffersNewQuest
+        {
+            get
+            {
+                return GetMember<bool>("OffersNewQuest");
+            }
+        }
+
+        /// <summary>
+        /// Quest icon is visible, but greyed out
+        /// </summary>
+        public bool OffersNewQuestNextLevel
+        {
+            get
+            {
+                return GetMember<bool>("OffersNewQuestNextLevel");
+            }
+        }
+
+        /// <summary>
+        /// The double blue/yellow arrow indicating that the quest step is completed
+        /// </summary>
+        public bool QuestInProgress
+        {
+            get
+            {
+                return GetMember<bool>("QuestInProgress");
+            }
+        }
+
+        /// <summary>
+        /// The 'star' blue/yellow icon indicating quest is finished
+        /// </summary>
+        public bool QuestComplete
+        {
+            get
+            {
+                return GetMember<bool>("QuestComplete");
+            }
+        }
+
+        public string Class
+        {
+            get
+            {
+                return GetMember<string>("Class");
+            }
+        }
+        #endregion
+
+        #region isxAion-1.5.1.4.0116
+        /// <summary>
+        /// 'FALSE' on non-gatherables and gatherables for which your skill is too low 
+        /// </summary>
+        public bool CanGather
+        {
+            get
+            {
+                return GetMember<bool>("CanGather");
+            }
+        }
+
+        public bool IsCorpse
+        {
+            get
+            {
+                return GetMember<bool>("IsCorpse");
+            }
+        }
+
+        /// <summary>
+        ///  i.e., a corpse that is lootable for you
+        /// </summary>
+        public bool IsLootable
+        {
+            get
+            {
+                return GetMember<bool>("IsLootable");
+            }
+        }
+
+        /// <summary>
+        /// Only useful for NPCs
+        /// </summary>
+        public bool CanChat
+        {
+            get
+            {
+                return GetMember<bool>("CanChat");
+            }
+        }
+
+        /// <summary>
+        /// Only useful for NPCs
+        /// </summary>
+        public bool CanShop
+        {
+            get
+            {
+                return GetMember<bool>("CanShop");
+            }
+        }
+
+        public bool CanAttack
+        {
+            get
+            {
+                return GetMember<bool>("CanAttack");
+            }
+        }
+
+        /// <summary>
+        /// i.e., has the "gear" icon for interaction
+        /// </summary>
+        public bool IsUsable
+        {
+            get
+            {
+                return GetMember<bool>("IsUsable");
+            }
+        }
+
+        #endregion
+        #region isxAion-1.5.1.4.0074
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool IsAggro
+        {
+            get
+            {
+                return GetMember<bool>("IsAggro");
+            }
+        }
+        #endregion
+
+        #region isxAion-1.0.5.11.0601
+        /// <summary>
+        /// This is a signed integer!  Most NPCs/PCs have negative EntityIDs. All entities have an "EntityID" while only spawns capable of true interaction have an "ID".
+        /// </summary>
+        public int EntityID
+        {
+            get
+            {
+                return GetMember<int>("EntityID");
+            }
+        }
+        #endregion
+
         public uint ID
         {
             get
@@ -185,6 +374,12 @@ namespace Aion.isxAion
 		#endregion
 
 		#region Methods
+        #region isxAion-1.5.1.4.0116
+        public bool DoTarget()
+        {
+            return ExecuteMethod("DoTarget");
+        }
+        #endregion
 		#endregion
 	}
 }

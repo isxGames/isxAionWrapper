@@ -37,12 +37,14 @@ namespace Aion.isxAion
     public class EntitySpawnedEventArgs : LSEventArgs
     {
         /// <summary>
-        /// Aion_OnEntitySpawned(int ID, string Name, int Level, string Type)
+        /// Aion_OnEntitySpawned(int ID, int EntityID, string Name, int Level, string Type)
+        /// Last changed: isxAion-1.0.5.11.0601
         /// </summary>
         /// <param name="args"></param>
         internal EntitySpawnedEventArgs(params string[] args) : base(args) { }
 
         public int ID { get { return Convert.ToInt32(Args[0]); } }
+        public int EntityID { get { return Convert.ToInt32(Args[0]); } }
         public string Name { get { return Args[1]; } }
         public int Level { get { return Convert.ToInt32(Args[2]); } }
         public string Type { get { return Args[3]; } }
@@ -50,12 +52,13 @@ namespace Aion.isxAion
     public class EntityDespawnedEventArgs : LSEventArgs
     {
         /// <summary>
-        /// Aion_onEntityDespawned(int ID)
+        /// Aion_onEntityDespawned(int EntityID)
+        /// Last changed: isxAion-1.0.5.11.0601
         /// </summary>
         /// <param name="args"></param>
         internal EntityDespawnedEventArgs(params string[] args) : base(args) { }
 
-        public int ID { get { return Convert.ToInt32(Args[0]); } }
+        public int EntityID { get { return Convert.ToInt32(Args[0]); } }
     }
     #endregion
 }
