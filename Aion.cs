@@ -47,7 +47,7 @@ namespace Aion.isxAion
 		#region Methods 
         #region isxAion-1.5.1.4.0194
         /// <summary>
-        /// Spread wings and take flight
+        /// *TOGGLE*  This setting is persistant.
         /// </summary>
         public bool BlockAntiAFK()
         {
