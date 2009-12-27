@@ -62,6 +62,42 @@ namespace Aion.isxAion
 		#endregion
 
 		#region Methods
+        /// <summary>
+        ///***
+        ///*** When isxAion is first executed, it extracts several data files from the Aion client and creates an SQLite database file.  These files
+        ///*** are located in /innerspace/Extensions/isxAion/ClientData.  The first method above, "RefreshDataFiles", will delete the xml files and
+        ///*** retrieve new copies from the installed Aion client.  The second method will delete the SQLite Database and recreate it.
+        ///***
+        ///*** These two methods are typically used in unison either when there have been changes made to the Aion client (at which point BOTH
+        ///*** methods should be used), or when changes have been made to isxAion and users are instructed to "rebuild the isxAion database" (at which
+        ///*** point only "RebuildDB" needs to be issued.)  
+        ///***
+        ///*** Both methods are safe to use at any point; however, users are encouraged to "RefreshDataFiles" before "RebuildDB" unless they're sure 
+        ///*** that the current xml files are up-to-date.
+        ///***
+        /// </summary>
+        public bool RefreshDataFiles()
+        {
+            return ExecuteMethod("RefreshDataFiles");
+        }
+        /// <summary>
+        ///***
+        ///*** When isxAion is first executed, it extracts several data files from the Aion client and creates an SQLite database file.  These files
+        ///*** are located in /innerspace/Extensions/isxAion/ClientData.  The first method above, "RefreshDataFiles", will delete the xml files and
+        ///*** retrieve new copies from the installed Aion client.  The second method will delete the SQLite Database and recreate it.
+        ///***
+        ///*** These two methods are typically used in unison either when there have been changes made to the Aion client (at which point BOTH
+        ///*** methods should be used), or when changes have been made to isxAion and users are instructed to "rebuild the isxAion database" (at which
+        ///*** point only "RebuildDB" needs to be issued.)  
+        ///***
+        ///*** Both methods are safe to use at any point; however, users are encouraged to "RefreshDataFiles" before "RebuildDB" unless they're sure 
+        ///*** that the current xml files are up-to-date.
+        ///***
+        /// </summary>
+        public bool RebuildDB()
+        {
+            return ExecuteMethod("RebuildDB");
+        }
 		#endregion
 	}
 }

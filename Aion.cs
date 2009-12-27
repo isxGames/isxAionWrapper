@@ -22,7 +22,6 @@ namespace Aion.isxAion
 		#endregion
 
 		#region Members
-        #region isxAion-1.5.1.4.0194
         public bool BlockingAntiAFK
         {
             get
@@ -30,22 +29,37 @@ namespace Aion.isxAion
                 return GetMember<bool>("BlockingAntiAFK");
             }
         }
-        #endregion
-
         /// <summary>
-		/// If no optional parameters are used, then the given List is filled with an array 
-		/// of entities visible to the client at the point of creation (sorted by distance.) 
-		/// The optional parameters can be anything typically used with the entity search 
-		/// routines (including 'sorting' parameters).
-		/// </summary>
-		public List<Entity> GetEntities(params string[] Args)
-		{
-			return Util.GetListFromMember<Entity>(this, "GetEntities", "entity", Args);
-		}
+        /// The heading from you to (ToX,ToY,...)
+        /// </summary>
+        public float HeadingTo(float ToX, float ToY)
+        {
+            return GetMember<float>("HeadingTo",ToX.ToString(),ToY.ToString());
+        }
+        /// <summary>
+        /// The heading from you to (ToX,ToY,...)
+        /// </summary>
+        public float Bearing(float ToX, float ToY)
+        {
+            return GetMember<float>("Bearing", ToX.ToString(), ToY.ToString());
+        }
+        /// <summary>
+        /// The heading from (FromX,FromY,...) to (ToX,ToY,...)
+        /// </summary>
+        public float HeadingTo(float FromX, float FromY, float ToX, float ToY)
+        {
+            return GetMember<float>("HeadingTo", FromX.ToString(), FromY.ToString(), ToX.ToString(), ToY.ToString());
+        }
+        /// <summary>
+        /// The heading from (FromX,FromY,...) to (ToX,ToY,...)
+        /// </summary>
+        public float Bearing(float FromX, float FromY, float ToX, float ToY)
+        {
+            return GetMember<float>("Bearing", FromX.ToString(), FromY.ToString(), ToX.ToString(), ToY.ToString());
+        }
         #endregion
 
 		#region Methods 
-        #region isxAion-1.5.1.4.0194
         /// <summary>
         /// *TOGGLE*  This setting is persistant.
         /// </summary>
@@ -53,7 +67,16 @@ namespace Aion.isxAion
         {
             return ExecuteMethod("BlockAntiAFK");
         }
-        #endregion
+        /// <summary>
+        /// If no optional parameters are used, then the given List is filled with an array 
+        /// of entities visible to the client at the point of creation (sorted by distance.) 
+        /// The optional parameters can be anything typically used with the entity search 
+        /// routines (including 'sorting' parameters).
+        /// </summary>
+        public List<Entity> GetEntities(params string[] Args)
+        {
+            return Util.GetListFromMethod<Entity>(this, "GetEntities", "entity", Args);
+        }
         #endregion
     }
 }
