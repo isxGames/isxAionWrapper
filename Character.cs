@@ -7,16 +7,16 @@ using LavishScriptAPI;
 
 namespace Aion.isxAion
 {
-    public class Character : LavishScriptPersistentObject
+    public class Character : LavishScriptObject
 	{
 		#region Constructors
-        public Character(LavishScriptPersistentObject Obj)
+        public Character(LavishScriptObject Obj)
 			: base(Obj)
 		{
 		}
 
 		public Character()
-            : base(LavishScript.Objects.GetPersistentObject("Me"))
+            : base(LavishScript.Objects.GetObject("Me"))
 		{
 		}
 		#endregion
