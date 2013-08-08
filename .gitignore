@@ -5,4 +5,7 @@
 bin/Release/isxAionWrapper.XML
 bin/Release/isxAionWrapper.dll
 bin/Release/isxAionWrapper.pdb
+bin/Debug/isxAionWrapper.XML
+bin/Debug/isxAionWrapper.dll
+bin/Debug/isxAionWrapper.pdb
 /obj
